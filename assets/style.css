@@ -90,9 +90,10 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+/* #gallery {
+	min-height: 100vh;
+} */
+
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -100,7 +101,7 @@ body {
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active-tag, .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #BEB45A;
 	border-radius:0 ;
@@ -244,6 +245,11 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+.nav-link:hover,
+.item-column img:hover {
+	cursor: pointer;
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -353,4 +359,3 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
-
