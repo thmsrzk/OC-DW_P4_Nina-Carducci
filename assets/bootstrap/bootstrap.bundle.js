@@ -4705,7 +4705,7 @@
         document.body.append(this._element);
       }
 
-      this._element.style.display = 'block';
+      this._element.style.display = 'flex';
 
       this._element.removeAttribute('aria-hidden');
 
