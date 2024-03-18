@@ -114,15 +114,16 @@
       }
     },
     openLightBox(element, lightboxId) {
+      let src = element.attr("src").replace(".webp", "_fullsize.webp");
       $(`#${lightboxId}`)
         .find(".lightboxImage")
-        .attr("src", element.attr("src"));
+        .attr("src", src);
       $(`#${lightboxId}`).modal("toggle");
     },
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+        if ($(this).attr("src").replace("_fullsize", "") === $(".lightboxImage").attr("src").replace("_fullsize", "")) {
           activeImage = $(this);
         }
       });
@@ -147,21 +148,21 @@
       }
       let index = 0,
         prev = null;
-
+    
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
+        if ($(activeImage).attr("src").replace("_fullsize", "") === $(this).attr("src").replace("_fullsize", "")) {
           index = i - 1;
         }
       });
-      prev =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(prev).attr("src"));
+    
+      prev = imagesCollection[index] || imagesCollection[imagesCollection.length - 1];
+      let src = $(prev).attr("src").replace(".webp", "_fullsize.webp");
+      $(".lightboxImage").attr("src", src);
     },
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+        if ($(this).attr("src").replace("_fullsize", "") === $(".lightboxImage").attr("src").replace("_fullsize", "")) {
           activeImage = $(this);
         }
       });
@@ -186,14 +187,16 @@
       }
       let index = 0,
         next = null;
-
+    
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
+        if ($(activeImage).attr("src").replace("_fullsize", "") === $(this).attr("src").replace("_fullsize", "")) {
           index = i + 1;
         }
       });
+    
       next = imagesCollection[index] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      let src = $(next).attr("src").replace(".webp", "_fullsize.webp");
+      $(".lightboxImage").attr("src", src);
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
