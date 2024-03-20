@@ -252,6 +252,11 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+.modal-dialog {
+	display: flex;
+	align-items: center;
+}
+
 .nav-link:hover,
 .item-column img:hover {
 	cursor: pointer;
