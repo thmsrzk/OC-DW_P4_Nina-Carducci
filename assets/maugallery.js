@@ -61,9 +61,19 @@
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
+    $(".gallery").keydown(function(e) {
+      if (e.which == 37) {
+          $.fn.mauGallery.methods.prevImage(options.lightboxId);
+      }
+  });
     $(".gallery").on("click", ".mg-next", () =>
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
+    $(document).keydown(function(e) {
+      if (e.which == 39) {
+          $.fn.mauGallery.methods.nextImage(options.lightboxId);
+      }
+  });
   };
   $.fn.mauGallery.methods = {
     createRowWrapper(element) {
@@ -199,7 +209,7 @@
       $(".lightboxImage").attr("src", src);
     },
     createLightBox(gallery, lightboxId, navigation) {
-      gallery.append(`<div class="modal fade" id="${
+      gallery.append(`<aside class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
       }" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog" role="document">
