@@ -6,10 +6,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />	
-		<link rel="stylesheet" href="./assets/Stylesheets/style.css">
+		<link rel="stylesheet" href="./assets/Stylesheets/style.min.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "LocalBusiness, Photograph",
+			  "name": "Nina Carducci",
+			  "image": "./assets/images/nina.webp",
+			  "@id": "",
+			  "url": "https://nina-carducci.github.io/",
+			  "telephone": "+33 5 56 67 78 89",
+			  "address": {
+				"@type": "PostalAddress",
+				"streetAddress": "68 avenue Alsace-Lorraine",
+				"addressLocality": "Bordeaux",
+				"postalCode": "33200",
+				"addressCountry": "FR"
+			  },
+			  "priceRange": "50€ - 400€",
+			  "openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+				  "Monday",
+				  "Tuesday",
+				  "Wednesday",
+				  "Thursday",
+				  "Friday"
+				],
+				"opens": "10:00",
+				"closes": "19:00"
+			  }
+			}
+			</script>
 	</head>
 	<body>
 		<header class="top-header">
@@ -88,15 +119,7 @@
 			</section>
 			<section id="about">
 				<div class="picture left">
-					<picture>
-						<source 
-						media="(max-width: 768px)" 
-						srcset="./assets/images/nina_mobile.webp">
-						<source 
-						media="(min-width: 769px)" 
-						srcset="./assets/images/nina.webp">
-						<img loading="lazy" src="./assets/images/nina.webp" class="d-block w-100" alt="Photo représentant Nina Carducci">
-					</picture>
+					<img loading="lazy" src="./assets/images/nina.webp" class="d-block w-100" alt="Photo représentant Nina Carducci">
 				</div>
 				<div id="about-me">
 					<h2 class="about-me__title">A propos de moi</h2>
@@ -188,15 +211,7 @@
 						</form>
 					</div>
 					<div class="picture right">
-						<picture>
-							<source 
-							media="(max-width: 768px)" 
-							srcset="./assets/images/camera_mobile.webp">
-							<source 
-							media="(min-width: 769px)" 
-							srcset="./assets/images/camera.webp">
-							<img loading="lazy" src="./assets/images/camera.webp" class="d-block w-100" alt="Image d'un appareil photo">
-						</picture>
+						<img loading="lazy" src="./assets/images/camera.webp" class="d-block w-100" alt="Image d'un appareil photo">
 					</div>
 				</div>
 			</section>
