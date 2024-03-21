@@ -262,6 +262,19 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+footer{
+	background-color: white;
+	display: flex;
+	justify-content: flex-end;
+	padding: 30px;
+}
+
+#copyright {
+	font-size: 14px;
+	display: flex;
+	margin-bottom: 0;
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
